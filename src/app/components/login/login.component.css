@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 32px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 330px;
+}
+
+.expand {
+    width: 100%
+}
+
+.spinner {
+    margin: 10px auto;
+}
