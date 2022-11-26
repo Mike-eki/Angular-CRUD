@@ -36,10 +36,10 @@
       <ng-container matColumnDef='actions'>
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element" style="text-align: right">
-         <a class="clickeable" style="color: #4769e6">
+         <a class="clickeable" style="color: #4769e6" routerLink="/dashboard/person-details/1">
            <mat-icon matTooltip="More details">search</mat-icon>
          </a>
-         <a class="clickeable" style="color: #1c1c14">
+         <a class="clickeable" style="color: #1c1c14" routerLink="/dashboard/edit-person/1">
            <mat-icon matTooltip="Edit this">edit</mat-icon>
          </a>
          <a (click)="deletePerson(element)" class="clickeable" style="color: #e64747">
