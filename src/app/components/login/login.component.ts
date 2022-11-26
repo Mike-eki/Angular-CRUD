@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
     const password = this.form.value.password;
 
     if(user === 'patito' && password === 'de ule') {
-      // Redireccionamos al dashboard
       this.fakeLoading()
     } else {
       // Mostramos mensaje de error

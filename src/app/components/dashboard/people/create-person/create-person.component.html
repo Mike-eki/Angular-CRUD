@@ -1,0 +1,39 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Create Person</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 15px;">
+        <form [formGroup]="form" (ngSubmit)="addPerson()">
+
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="expand">
+                        <mat-label>Fullname</mat-label>
+                        <input matInput autocomplete="off" formControlName="fullName">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="4">
+                    <img src="https://cdn4.iconfinder.com/data/icons/mayssam/512/add_user-512.png" style="width: 300px; height: 300px;"/>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="expand">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput autocomplete="off" formControlName="phoneNumber">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="expand">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput autocomplete="off" formControlName="emailAddress">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button routerLink="/dashboard/people" style="margin-right: 15px;" mat-button>Back</button>
+                    <button type="submit" [disabled]="this.form.invalid" mat-button color="primary">Create</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+        </form>
+    </mat-card>
+</div>

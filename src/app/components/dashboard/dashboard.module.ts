@@ -6,13 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PeopleComponent } from './people/people.component';
+import { CreatePersonComponent } from './people/create-person/create-person.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     NavbarComponent,
-    PeopleComponent
+    PeopleComponent,
+    CreatePersonComponent
   ],
   imports: [
     CommonModule,
