@@ -1,0 +1,28 @@
+.container {
+    padding: 15px;
+}
+
+.card-container {
+    margin: 10px auto;
+}
+
+.card {
+    margin: 10px auto;
+    width: 330px;
+    max-width: 100%;
+}
+
+.header-fullname-img {
+    background-image: url('https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png');
+    background-size: cover;
+}
+
+.header-phonenumber-img {
+    background-image: url('https://icons.veryicon.com/png/o/internet--web/truckhome/phone-73.png');
+    background-size: cover;
+}
+
+.header-emailaddress-img {
+    background-image: url('https://icons.veryicon.com/png/o/miscellaneous/feather-v423/at-sign-2.png');
+    background-size: cover;
+}

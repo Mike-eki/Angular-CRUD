@@ -18,6 +18,8 @@ export class PeopleComponent implements OnInit {
   
   listPeople : People[] = []
 
+  loading : boolean = false
+
   displayedColumns: string[] = ['fullName', 'phoneNumber', 'emailAddress', 'actions'];
   dataSource!: MatTableDataSource<any>;
 
@@ -46,14 +48,18 @@ export class PeopleComponent implements OnInit {
   }
 
   deletePerson(element : People) {
-    this._peopleService.deletePerson(element.id)
-    this.loadPeople()
-
-    this._snackBar.open('The contact was removed', '', {
-      duration: 1700,
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom'
-    })
+    this.loading = true
+    
+    setTimeout(() => {
+      this._peopleService.deletePerson(element.id)
+      this.loadPeople()
+      this.loading = false
+      this._snackBar.open('The contact was removed', '', {
+        duration: 1700,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom'
+      })
+    }, 3000)
   }
 
 

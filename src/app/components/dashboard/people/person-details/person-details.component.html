@@ -1,1 +1,27 @@
-<p>person-details works!</p>
+<div class="container">
+    <mat-toolbar>
+        <span>Person Details</span>
+    </mat-toolbar>
+    <div class="card-container">
+        <mat-card class="card">
+            <mat-card-header>
+                <div mat-card-avatar class="header-fullname-img"></div>
+                <mat-card-title>Noelle Maguiver</mat-card-title>
+                <mat-card-subtitle>Fullname</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-header>
+                    <div mat-card-avatar class="header-phonenumber-img"></div>
+                    <mat-card-title>321654895</mat-card-title>
+                    <mat-card-subtitle>Phone Number</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-header>
+                <div mat-card-avatar class="header-emailaddress-img"></div>
+                <mat-card-title>another@email.com</mat-card-title>
+                <mat-card-subtitle>Email Address</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="start">
+                <button mat-raised-button routerLink="/dashboard/people" >Back</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

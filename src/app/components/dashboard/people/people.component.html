@@ -1,8 +1,10 @@
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>
+
 <div class="container">
 <mat-toolbar>
     <span>People</span>
     <span class="example-spacer"></span>
-    <button mat-button color="primary" routerLink="/dashboard/create-person">Add contact</button>
+    <button mat-raised-button color="primary" routerLink="/dashboard/create-person">Add contact</button>
 </mat-toolbar>
 
 

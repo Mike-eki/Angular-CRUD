@@ -21,6 +21,10 @@ export class PeopleService {
     return this.listPeople.slice();
   }
 
+  getPerson(id: number) {
+    return this.listPeople.find(element => element.id === id)
+  }
+
   addPerson(person : People) {
     this.listPeople.unshift(person)
   }
