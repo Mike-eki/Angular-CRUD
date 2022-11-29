@@ -1,22 +1,24 @@
+<!-- <mat-progress-bar *ngIf="loading ? person$" color="accent" mode="indeterminate"></mat-progress-bar> -->
+
 <div class="container">
     <mat-toolbar>
         <span>Person Details</span>
     </mat-toolbar>
-    <div class="card-container">
+    <div *ngIf="person$ | async as person" class="card-container">
         <mat-card class="card">
             <mat-card-header>
                 <div mat-card-avatar class="header-fullname-img"></div>
-                <mat-card-title>Noelle Maguiver</mat-card-title>
+                <mat-card-title>{{ person.name }}</mat-card-title>
                 <mat-card-subtitle>Fullname</mat-card-subtitle>
             </mat-card-header>
             <mat-card-header>
                     <div mat-card-avatar class="header-phonenumber-img"></div>
-                    <mat-card-title>321654895</mat-card-title>
+                    <mat-card-title>{{ person.phoneNumber }}</mat-card-title>
                     <mat-card-subtitle>Phone Number</mat-card-subtitle>
             </mat-card-header>
             <mat-card-header>
                 <div mat-card-avatar class="header-emailaddress-img"></div>
-                <mat-card-title>another@email.com</mat-card-title>
+                <mat-card-title>{{ person.emailAddress }}</mat-card-title>
                 <mat-card-subtitle>Email Address</mat-card-subtitle>
             </mat-card-header>
             <mat-card-actions align="start">

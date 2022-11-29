@@ -2,32 +2,32 @@
     <mat-toolbar>
         <span>Edit Contact</span>
     </mat-toolbar>
-    <form class="card-container">
+    <form class="card-container" [formGroup]="form" (ngSubmit)="editContact()">
         <mat-card class="card">
             <mat-card-header>
                 <div mat-card-avatar class="header-fullname-img"></div>
                 <mat-form-field class="expand">
                     <mat-label>Fullname</mat-label>
-                    <input value="Noelle Maguiver" matInput autocomplete="off" >
+                    <input matInput autocomplete="off" formControlName="name" >
                 </mat-form-field>
             </mat-card-header>
             <mat-card-header>
                     <div mat-card-avatar class="header-phonenumber-img"></div>
                     <mat-form-field class="expand">
                         <mat-label>Phone Number</mat-label>
-                        <input value="321654895" matInput autocomplete="off" >
+                        <input matInput autocomplete="off" formControlName="phoneNumber">
                     </mat-form-field>
             </mat-card-header>
             <mat-card-header>
                 <div mat-card-avatar class="header-emailaddress-img"></div>
                 <mat-form-field class="expand">
                     <mat-label>Email Address</mat-label>
-                    <input value="another@email.com" matInput autocomplete="off" >
+                    <input matInput autocomplete="off" formControlName="emailAddress">
                 </mat-form-field>
             </mat-card-header>
             <mat-card-actions align="start">
                 <button mat-raised-button routerLink="/dashboard/people">Back</button>
-                <button type="submit" mat-raised-button color="primary" routerLink="/dashboard/people">Update</button>
+                <button type="submit" mat-raised-button color="primary">Update</button>
             </mat-card-actions>
         </mat-card>
     </form>

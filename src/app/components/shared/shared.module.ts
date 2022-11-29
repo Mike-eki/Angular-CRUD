@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 // Modules
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Material
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -39,7 +40,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    HttpClientModule
   ],
   exports: [
     MatFormFieldModule,
@@ -56,7 +58,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

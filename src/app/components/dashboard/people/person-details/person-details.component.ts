@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { People } from 'src/app/interfaces/people';
+import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
   selector: 'app-person-details',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonDetailsComponent implements OnInit {
 
-  constructor() { }
+  id : number
+  person$! : Observable<People>
+  // loading : boolean = false
+
+  constructor(private _servicePeople : PeopleService, private aRoute : ActivatedRoute) { 
+    this.id = +this.aRoute.snapshot.paramMap.get('id')!
+  }
 
   ngOnInit(): void {
+    this.person$ = this._servicePeople.getPerson(this.id)
   }
 
 }
